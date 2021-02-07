@@ -1,0 +1,31 @@
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24">
+    <div
+      nz-col
+      [nzSpan]="6"
+      *ngFor="let control of controlArray"
+      [hidden]="!control.show"
+    >
+      <nz-form-item>
+        <nz-form-label [nzFor]="control.index">
+          {{ subjects[control.index] }}
+        </nz-form-label>
+        <nz-form-control>
+          <input
+            nz-input
+            [formControlName]="control.value"
+            [attr.id]="control.index"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row>
+    <div nz-col [nzSpan]="24" class="search-area">
+      <button nz-button [nzType]="'primary'" (click)="getScore()">Xác nhận</button>
+      <button nz-button (click)="resetForm()">Làm mới</button>      
+    </div>
+  </div>
+</form>
+<!-- <div class="search-result-list">Search Result List</div> -->

@@ -1,0 +1,39 @@
+<!-- <div class="ant-rank">
+  <div nz-row nzAlign="bottom">
+    <div nz-col nzSpan="8">
+      <app-major-block [backgroundColor]="'red'" [color]="'white'" [name]="'A'"></app-major-block>
+      <div class="second">col-8</div>
+    </div>
+    <div nz-col nzSpan="8">
+      <app-major-block [backgroundColor]="'blue'" [color]="'white'" [name]="'B'"></app-major-block>
+      <div class="first">col-8</div>
+    </div>
+    <div nz-col nzSpan="8">
+      <app-major-block [backgroundColor]="'orange'" [color]="'white'" [name]="'C'"></app-major-block>
+      <div class="third">col-8</div>
+    </div>
+  </div>
+</div> -->
+
+<nz-card nzTitle="Điểm Tổ Hợp">
+  <div nz-card-grid [ngStyle]="gridStyle">
+    <div class="block-title">Khối A</div>
+    <div class="mean">{{diemToHop.diemKhoiA}}</div>
+  </div>
+  <div nz-card-grid [ngStyle]="gridStyle">
+    <div class="block-title">Khối B</div>
+    <div class="mean">{{diemToHop.diemKhoiB}}</div>
+  </div>
+  <div nz-card-grid [ngStyle]="gridStyle">
+    <div class="block-title">Khối C</div>
+    <div class="mean">9.8</div>
+  </div>
+  <div nz-card-grid [ngStyle]="gridStyle">
+    <div class="block-title">Khối D</div>
+    <div class="mean">9.8</div>
+  </div>
+  <div nz-card-grid [ngStyle]="gridStyle">
+    <div class="block-title">Khối A1</div>
+    <div class="mean">9.8</div>
+  </div>
+</nz-card>

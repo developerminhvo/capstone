@@ -1,0 +1,48 @@
+.first,
+.second,
+.third {
+  background-color: #0092ff;
+  border: 1px solid #d9d9d9;
+}
+
+.first {
+  height: 400px;
+}
+.second {
+  height: 300px;
+}
+.third {
+  height: 200px;
+}
+
+.industry-block {
+  height: 100px;
+}
+
+.ant-rank {
+  //   padding: 24px;
+  background: #fbfbfb;  
+  border-radius: 6px;
+  max-width: 900px;
+  margin: auto;
+  width: 900px;    
+  @apply container  
+}
+.card-subbject {
+  @apply flex rounded-lg
+}
+
+h2 {
+  @apply text-red-400 font-medium leading-loose text-lg
+}
+
+ul {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4
+}
+section {
+  @apply px-4 sm:px-6 lg:px-4 xl:px-6 pt-4 pb-4 sm:pb-6 lg:pb-4 xl:pb-6 space-y-4
+}
+
+header {
+  @apply flex items-center justify-between
+}
