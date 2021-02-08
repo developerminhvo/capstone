@@ -1,0 +1,24 @@
+<nz-modal [(nzVisible)]="isVisible" [nzContent]="content" [nzFooter]="modalFooter"> </nz-modal>
+<!-- 
+[nzTitle]="null"
+  [nzContent]="null"
+  [nzFooter]="null"   -->
+
+<ng-template #modalFooter>
+  <button
+    nz-button
+    nzType="primary"
+    (click)="handleOk()"
+    [nzLoading]="isConfirmLoading"
+  >
+    OK
+  </button>
+</ng-template>
+<ng-template #content>
+  <div class="option">
+    <nz-radio-group [(ngModel)]="radioValue">
+      <label nz-radio nzValue="mean">Tính điểm tổ hợp</label>
+      <label nz-radio nzValue="suggest">Gợi ý ngành nghề</label>
+    </nz-radio-group>
+  </div>
+</ng-template>

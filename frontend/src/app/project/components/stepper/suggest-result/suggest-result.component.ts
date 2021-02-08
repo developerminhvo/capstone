@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SuggestResultComponent implements OnInit {
 
   @Input() diemToHop: any = null;
+  @Input() resultValue: string = null;
+  
   gridStyle = {
     width: '25%',
     textAlign: 'center'

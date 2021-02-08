@@ -1,9 +1,9 @@
 <h1>Bạn muốn xét theo tiêu chí nào?</h1>
 
 <div class="option">
-  <nz-radio-group [(ngModel)]="radioValue">
-    <label nz-radio nzValue="hocba" (click)="getType()">Xét điểm học bạ</label>
-    <label nz-radio nzValue="thpt" (click)="getType()">Xét điểm THPT quốc gia</label>    
+  <nz-radio-group [(ngModel)]="radioValue" (ngModelChange)="getType()">
+    <label nz-radio nzValue="hocba">Xét điểm học bạ</label>
+    <label nz-radio nzValue="thpt">Xét điểm THPT quốc gia</label>    
     <label nz-radio nzValue="M"
       >Thêm... <input type="text" nz-input *ngIf="radioValue === 'M'"
     /></label>

@@ -15,18 +15,19 @@ import { ScoreComponent } from './components/stepper/score/score.component';
 import { SuggestResultComponent } from './components/stepper/suggest-result/suggest-result.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MajorBlockComponent } from './components/stepper/suggest-result/major-block/major-block.component';
+import { ModalComponent } from './components/stepper/modal/modal.component';
 
 
 
 @NgModule({
-  declarations: [ProjectComponent, NavigationComponent, NavbarLeftComponent, ResizerComponent, SidebarComponent, StepperComponent, TypeComponent, ScoreComponent, SuggestResultComponent, MajorBlockComponent],
+  declarations: [ProjectComponent, NavigationComponent, NavbarLeftComponent, ResizerComponent, SidebarComponent, StepperComponent, TypeComponent, ScoreComponent, SuggestResultComponent, MajorBlockComponent, ModalComponent],
   imports: [
-    CommonModule,
+    CommonModule,  
     ProjectRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     JiraControlModule,
-    NgZorroAntdModule
+    NgZorroAntdModule    
   ]
 })
 export class ProjectModule { }

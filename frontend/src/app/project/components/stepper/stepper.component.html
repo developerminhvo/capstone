@@ -11,21 +11,23 @@
   <div *ngIf="current === 1">
     <ng-container *ngTemplateOutlet="appscore"></ng-container>
   </div>
-  <!-- <div *ngIf="current === 2">
+  <div *ngIf="current === 2">
     <ng-container *ngTemplateOutlet="appsuggestresult"></ng-container>
-  </div> -->
+  </div>
 </div>
 
 <ng-template #apptype>
   <app-type (type)="chonLoaiDiem($event)" [typeInput]="type"></app-type>
 </ng-template>
 <ng-template #appscore>
-  <app-score [type]="type" (layDiemToHop)="layDiemToHop($event)"></app-score>
+  <app-score #score [type]="type" (layDiemToHop)="layDiemToHop($event)"></app-score>
 </ng-template>
 <ng-template #appsuggestresult>
-  <app-suggest-result [diemToHop]="diemToHop"></app-suggest-result>
+  <app-suggest-result [diemToHop]="diemToHop" [resultValue]="resultValue"></app-suggest-result>
 </ng-template>
-<ng-template></ng-template>
+
+<app-modal [isVisible]="isVisible" (test)="handleModal($event)"></app-modal>
+
 <div class="steps-action">
   <button nz-button nzType="default" (click)="quayLai()" *ngIf="current > 0">
     <span>Quay lại</span>
